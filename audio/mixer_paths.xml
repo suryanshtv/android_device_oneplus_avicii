@@ -377,8 +377,8 @@
     <ctl name="WSA_RX0 Digital Volume" value="84" />
     <ctl name="WSA_RX1 Digital Volume" value="84" />
     <!-- Decrease Headphone and Earpiece volume -->
-    <ctl name="RX_RX0 Digital Volume" value="79" />
-    <ctl name="RX_RX1 Digital Volume" value="79" />
+    <ctl name="RX_RX0 Digital Volume" value="84" />
+    <ctl name="RX_RX1 Digital Volume" value="84" />
     <ctl name="RX_RX2 Digital Volume" value="84" />
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
@@ -2933,8 +2933,25 @@
         <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
     </path>
     -->
+	<!--EXPERIMENTAL-->
     <path name="speaker">
         <ctl name="TFA Profile" value="MUSIC_48000" />
+	    <ctl name="RX_CDC_DMA_RX_0 Audio Mixer MultiMedia1" value="1" />
+        <!-- 
+	    @suryanshtv-EARPIECE VOLUME INCREASED BY x (experimental) FROM STOCK, STILL NO ISSUES
+        @suryanshtv-EARPIECE FORWARD MIXER RX_MACRO
+	    @suryanshtv-EARPIECE MUX SWITCH
+	    @suryanshtv-SOURCE TO EARPIECE RELAY
+        @suryanshtv-EARPIECE PA GAIN SET TO G_3_DB
+	    @suryanshtv-EARPIECE RDAC SWITCH
+        @suryanshtv-EARPIECE RX RELAY ON   
+		-->
+        <ctl name="RX_RX0 Digital Volume" value="84" />
+        <ctl name="RX_MACRO RX0 MUX" value="AIF1_PB" />
+	    <ctl name="RX INT0_1 MIX1 INP0" value="RX0" />
+        <ctl name="RX INT0 DEM MUX" value="CLSH_DSM_OUT" />
+        <ctl name="EAR_RDAC Switch" value="1" />
+	    <ctl name="RX_EAR Mode" value="ON" />
     </path>
 
     <path name="speaker-mono">
